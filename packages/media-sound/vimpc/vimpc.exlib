@@ -6,7 +6,7 @@ require sourceforge [ suffix=tar.gz ]
 SLOT="0"
 SUMMARY="ncurses based mpd client with vi like key bindings"
 BUGS_TO="sshilovsky@gmail.com"
-LISENSE=""
+LICENCES="GPL-2 GPL-3"
 
 DEPENDENCIES="
 	build+run:

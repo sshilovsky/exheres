@@ -5,7 +5,10 @@ SUMMARY="Xcb Python Bindings"
 HOMEPAGE="http://xcb.freedesktop.org"
 DOWNLOADS="${HOMEPAGE}/dist/${PNV}.tar.gz"
 
+LICENCES="public-domain"
 SLOT="0"
+
+PLATFORMS="~amd64 ~x86"
 
 DEPENDENCIES="
 	build:
@@ -14,5 +17,4 @@ DEPENDENCIES="
 		x11-libs/libxcb
 "
 
-PLATFORMS="~amd64 ~x86"
 

@@ -6,7 +6,7 @@ require sourceforge
 SLOT="0"
 SUMMARY="ncurses based file manager with vi like keybindings"
 BUGS_TO="sshilovsky@gmail.com"
-LISENSE="GPL-2"
+LICENCES="GPL-2"
 
 DEPENDENCIES="
 	build+run:

@@ -5,6 +5,7 @@ SUMMARY="lightweight and easily configurable tiling window manager"
 MY_URL="http://plhk.ru"
 HOMEPAGE="${MY_URL}/${PN}"
 DOWNLOADS="${MY_URL}/static/${PN}/${PNV}.tar.gz"
+LICENCES="MIT"
 
 SLOT="0"
 PLATFORMS="~amd64"

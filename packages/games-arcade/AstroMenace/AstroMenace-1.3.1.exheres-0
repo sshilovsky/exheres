@@ -9,6 +9,7 @@ HOMEPAGE="http://www.viewizard.com/"
 SUMMARY="Hardcore 3D space shooter with spaceship upgrade possibilities"
 PLATFORMS="~amd64 ~x86"
 REMOTE_IDS="sourceforge:${MY_PN2}"
+LICENCES="CCPL-Attribution-ShareAlike-3.0 GPL-3"
 
 DEPENDENCIES="
     build:
