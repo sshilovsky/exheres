@@ -1,0 +1,19 @@
+# Copyright 2012 Sergei Shilovsky <sshilovsky@gmail.com>
+# Distributed under the terms of the GNU General Public License v2
+
+require sourceforge [ suffix=tar.gz ]
+
+SLOT="0"
+SUMMARY="ncurses based mpd client with vi like key bindings"
+BUGS_TO="sshilovsky@gmail.com"
+LISENSE=""
+
+DEPENDENCIES="
+	build+run:
+		sys-libs/ncurses
+		dev-libs/pcre
+		media-libs/libmpdclient
+		sys-libs/glibc
+"
+
+WORK="${WORKBASE}/${PN}"

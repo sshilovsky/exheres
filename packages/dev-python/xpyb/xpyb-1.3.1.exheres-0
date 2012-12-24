@@ -1,0 +1,19 @@
+# Copyright 2012 Sergei Shilovsky
+# Distributed under the terms of the GNU General Public License v2
+
+SUMMARY="Xcb Python Bindings"
+HOMEPAGE="http://xcb.freedesktop.org"
+DOWNLOADS="${HOMEPAGE}/dist/${PNV}.tar.gz"
+
+SLOT="0"
+
+
+DEPENDENCIES="
+	build:
+		x11-proto/xcb-proto
+	build+run:
+		x11-libs/libxcb
+"
+
+PLATFORMS="~amd64 ~x86"
+

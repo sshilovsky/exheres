@@ -1,0 +1,14 @@
+# Copyright 2012 Sergei Shilovsky <sshilovsky@gmail.com>
+# Distributed under the terms of the GNU General Public License v2
+
+require sourceforge
+
+SLOT="0"
+SUMMARY="ncurses based file manager with vi like keybindings"
+BUGS_TO="sshilovsky@gmail.com"
+LISENSE="GPL-2"
+
+DEPENDENCIES="
+	build+run:
+		sys-libs/ncurses
+"

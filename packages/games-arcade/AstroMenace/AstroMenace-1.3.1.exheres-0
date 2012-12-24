@@ -1,0 +1,49 @@
+# Copyright 2012 Sergei Shilovsky <sshilovsky@gmail.com>
+# Distributed under the terms of the GNU General Public License v2
+
+SLOT="0"
+MY_PN="${PN,,}"
+MY_PN2="open${MY_PN}"
+DOWNLOADS="http://sourceforge.net/projects/${MY_PN2}/files/${PV}/${MY_PN}-src-${PV}.tar.bz2"
+HOMEPAGE="http://www.viewizard.com/"
+SUMMARY="Hardcore 3D space shooter with spaceship upgrade possibilities"
+PLATFORMS="~amd64 ~x86"
+REMOTE_IDS="sourceforge:${MY_PN2}"
+
+DEPENDENCIES="
+    build:
+	sys-devel/cmake
+	sys-devel/make
+	sys-apps/sed
+    build+run:
+	media-libs/SDL[X]
+	media-libs/libogg
+	media-libs/libvorbis
+	media-libs/openal
+	media-libs/freealut
+	media-libs/freetype
+	x11-libs/libXinerama
+"
+
+WORK="${WORKBASE}/${PN}"
+
+src_configure()
+{
+    cmake ./
+}
+
+src_compile()
+{
+    edo make
+    edo ./${PN} --pack --rawdata=./RAW_VFS_DATA
+    edo sed -i 's@^// #define DATADIR@#define DATADIR@' AstroMenaceSource/config.h
+    edo make
+}
+
+src_install()
+{
+    dobin   ${PN}
+    insinto /usr/share/${MY_PN}
+    doins   gamedata.vfs
+}
+
