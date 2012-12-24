@@ -13,7 +13,6 @@ DEPENDENCIES="
         sys-libs/ncurses
         dev-libs/pcre
         media-libs/libmpdclient
-        sys-libs/glibc
 "
 
 WORK="${WORKBASE}/${PN}"

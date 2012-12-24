@@ -12,11 +12,7 @@ REMOTE_IDS="sourceforge:${MY_PN2}"
 LICENCES="CCPL-Attribution-ShareAlike-3.0 GPL-3"
 
 DEPENDENCIES="
-    build:
-        sys-devel/cmake
-        sys-devel/make
-        sys-apps/sed
-        build+run:
+    build+run:
         media-libs/SDL[X]
         media-libs/libogg
         media-libs/libvorbis
