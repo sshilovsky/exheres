@@ -1,4 +1,4 @@
-# Copyright 2012 Sergei Shilovsky
+# Copyright 2012 Sergei Shilovsky <sshilovsky@gmail.com>
 # Distributed under the terms of the GNU General Public License v2
 
 SUMMARY="Xcb Python Bindings"
@@ -6,7 +6,6 @@ HOMEPAGE="http://xcb.freedesktop.org"
 DOWNLOADS="${HOMEPAGE}/dist/${PNV}.tar.gz"
 
 SLOT="0"
-
 
 DEPENDENCIES="
 	build:
