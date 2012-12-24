@@ -13,17 +13,17 @@ LICENCES="CCPL-Attribution-ShareAlike-3.0 GPL-3"
 
 DEPENDENCIES="
     build:
-	sys-devel/cmake
-	sys-devel/make
-	sys-apps/sed
-    build+run:
-	media-libs/SDL[X]
-	media-libs/libogg
-	media-libs/libvorbis
-	media-libs/openal
-	media-libs/freealut
-	media-libs/freetype
-	x11-libs/libXinerama
+        sys-devel/cmake
+        sys-devel/make
+        sys-apps/sed
+        build+run:
+        media-libs/SDL[X]
+        media-libs/libogg
+        media-libs/libvorbis
+        media-libs/openal
+        media-libs/freealut
+        media-libs/freetype
+        x11-libs/libXinerama
 "
 
 WORK="${WORKBASE}/${PN}"

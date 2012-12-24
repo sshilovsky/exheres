@@ -12,14 +12,14 @@ PLATFORMS="~amd64"
 MYOPTIONS=""
 
 DEPENDENCIES="
-	build+run:
-		x11-libs/libX11
-		x11-libs/libXft
-		x11-libs/libXrandr
+    build+run:
+        x11-libs/libX11
+        x11-libs/libXft
+        x11-libs/libXrandr
 "
 
 src_prepare() {
-	default
-	sed -i s+/usr/local+/usr+g "${WORK}/config.mk"
+    default
+    sed -i s+/usr/local+/usr+g "${WORK}/config.mk"
 }
 

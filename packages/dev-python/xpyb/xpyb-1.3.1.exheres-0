@@ -11,10 +11,9 @@ SLOT="0"
 PLATFORMS="~amd64 ~x86"
 
 DEPENDENCIES="
-	build:
-		x11-proto/xcb-proto
-	build+run:
-		x11-libs/libxcb
+    build:
+        x11-proto/xcb-proto
+    build+run:
+        x11-libs/libxcb
 "
-
 

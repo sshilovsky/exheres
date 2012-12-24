@@ -9,6 +9,6 @@ BUGS_TO="sshilovsky@gmail.com"
 LICENCES="GPL-2"
 
 DEPENDENCIES="
-	build+run:
-		sys-libs/ncurses
+    build+run:
+        sys-libs/ncurses
 "

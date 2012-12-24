@@ -9,11 +9,12 @@ BUGS_TO="sshilovsky@gmail.com"
 LICENCES="GPL-2 GPL-3"
 
 DEPENDENCIES="
-	build+run:
-		sys-libs/ncurses
-		dev-libs/pcre
-		media-libs/libmpdclient
-		sys-libs/glibc
+    build+run:
+        sys-libs/ncurses
+        dev-libs/pcre
+        media-libs/libmpdclient
+        sys-libs/glibc
 "
 
 WORK="${WORKBASE}/${PN}"
+
