@@ -5,6 +5,9 @@ MY_PN="open${PN,,}"
 MY_PNV="${PN,,}-src-${PV}"
 require sourceforge
 
+WORK="${WORKBASE}/${PN}"
+require cmake [ api=2 out_of_source=false ]
+
 SLOT="0"
 HOMEPAGE="http://www.viewizard.com/"
 SUMMARY="Hardcore 3D space shooter with spaceship upgrade possibilities"
@@ -21,13 +24,6 @@ DEPENDENCIES="
         media-libs/freetype
         x11-libs/libXinerama
 "
-
-WORK="${WORKBASE}/${PN}"
-
-src_configure()
-{
-    cmake ./
-}
 
 src_compile()
 {
