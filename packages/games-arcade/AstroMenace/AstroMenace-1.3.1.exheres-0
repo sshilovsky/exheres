@@ -27,10 +27,9 @@ DEPENDENCIES="
 
 src_compile()
 {
-    emake
-    edo ./${PN} --pack --rawdata=./RAW_VFS_DATA
     edo sed -i 's@^// #define DATADIR@#define DATADIR@' ${PN}Source/config.h
     emake
+    edo ./${PN} --pack --rawdata=./RAW_VFS_DATA --dir=.
 }
 
 src_install()
