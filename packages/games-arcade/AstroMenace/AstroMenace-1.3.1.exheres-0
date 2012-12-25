@@ -11,7 +11,7 @@ require cmake [ api=2 out_of_source=false ]
 SLOT="0"
 HOMEPAGE="http://www.viewizard.com/"
 SUMMARY="Hardcore 3D space shooter with spaceship upgrade possibilities"
-PLATFORMS="~amd64 ~x86"
+PLATFORMS="~amd64"
 LICENCES="CCPL-Attribution-ShareAlike-3.0 GPL-3"
 
 DEPENDENCIES="
