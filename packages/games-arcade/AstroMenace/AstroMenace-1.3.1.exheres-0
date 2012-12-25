@@ -25,10 +25,15 @@ DEPENDENCIES="
         x11-libs/libXinerama
 "
 
+src_prepare()
+{
+    default
+    edo sed -i 's@^// #define DATADIR@#define DATADIR@' ${PN}Source/config.h
+}
+
 src_compile()
 {
-    edo sed -i 's@^// #define DATADIR@#define DATADIR@' ${PN}Source/config.h
-    emake
+    default
     edo ./${PN} --pack --rawdata=./RAW_VFS_DATA --dir=.
 }
 
