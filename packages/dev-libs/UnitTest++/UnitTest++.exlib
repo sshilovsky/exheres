@@ -1,0 +1,39 @@
+# Copyright 2013 Sergei Shilovsky <sshilovsky@gmail.com>
+# Distributed under the terms of the GNU General Public License v2
+
+MY_PN="unittest-cpp"
+MY_PNV="${MY_PN}-${PV}"
+require sourceforge [ project="${MY_PN}" pnv="${MY_PNV}" suffix="zip" ]
+
+SLOT="0"
+SUMMARY="Lightweight unit testing framework for C++"
+LICENCES="MIT"
+
+WORK="${WORKBASE}/${PN}"
+
+export_exlib_phases src_install src_test
+
+DEFAULT_SRC_COMPILE_PARAMS="lib${PN}.a"
+
+UnitTest++_src_test()
+{
+    emake
+    ./Test${PN}
+}
+
+DEFAULT_SRC_INSTALL_EXTRA_DOCS=("COPYING" "docs/${PN}.html")
+UnitTest++_src_install()
+{
+    dolib.a "lib${PN}.a"
+    emagicdocs
+    local DIR="/usr/include/${PN,,}"
+    insinto  "${DIR}"
+    for x in "src/*.h"; do
+        doins $x
+    done
+    insinto  "${DIR}/Posix"
+    for x in "src/Posix/*.h"; do
+        doins $x
+    done
+}
+
