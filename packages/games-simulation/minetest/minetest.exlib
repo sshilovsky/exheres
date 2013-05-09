@@ -1,0 +1,29 @@
+# Copyright 2013 Sergei Shilovsky <sshilovsky@gmail.com>
+# Distributed under the terms of the GNU General Public License v2
+
+require github [ user="${PN}" suffix="tar.gz" rev="${PV}" ] cmake
+
+SLOT="0"
+SUMMARY="Open source infinite-world block sandbox game with survival and crafting"
+LICENCES="LGPL-2.1 CCPL-Attribution-ShareAlike-3.0"
+
+MYOPTIONS="curl freetype"
+
+DEPENDENCIES="
+    build+run:
+        app-arch/bzip2:*
+        dev-db/sqlite:3
+        dev-games/irrlicht:*[>=1.8-p4374]
+        media-libs/jpeg:*
+        media-libs/libpng:*
+        media-libs/libvorbis:*
+        media-libs/openal:*
+        x11-libs/libXxf86vm:*
+        curl? ( net-misc/curl:* )
+        freetype? ( media-libs/freetype:2 )
+"
+
+CMAKE_SRC_CONFIGURE_OPTION_ENABLES=(
+    FREETYPE CURL
+)
+
